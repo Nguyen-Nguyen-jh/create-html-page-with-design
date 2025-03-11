@@ -1,0 +1,12 @@
+1. What is HTTP?
+  - HTTP stands for Hypertext Transfer Protocol. It's a protocol used for transferring data over the web, 
+    specifically between a web server and a web browser.
+
+2. Browser and how they work?
+  - Web browsers are software applications that request, retrieve, and display resources from the internet. 
+    When you enter a URL, the browser fetches the web page and renders it for viewing. Key components include 
+    the user interface (address bar, navigation buttons), the browser engine (coordination of UI and rendering), 
+    the rendering engine (displaying HTML and CSS), networking (handling HTTP requests), JavaScript 
+    interpreter, and local storage. Browsers use different rendering engines, like Blink for Chrome and Opera, 
+    and Gecko for Firefox. They ensure web resources are displayed consistently across platforms while 
+    supporting additional functionalities through plugins and extensions.

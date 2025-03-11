@@ -1,0 +1,728 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Container */
+header {
+  background-color: #fff; /* You can adjust the background color */
+  padding: 20px 40px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 120px; /* Adjust logo size */
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Adjust spacing between items */
+}
+
+.nav-menu li {
+  font-size: 16px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff6347; /* Change hover color */
+}
+
+.icons img {
+  width: 30px; /* Icon size */
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  opacity: 0.8;
+}
+
+.main-wrapper {
+  padding: 0 90px 50px;
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #282a3a,
+    transparent
+  ); /* Create the tapered effect */
+}
+
+.hero-text h1 {
+  font-family: 'Playfair', serif;
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #282a3a;
+  margin-bottom: 40px;
+}
+
+.hero-text button {
+  display: flex; /* Align child elements horizontally */
+  gap: 10px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  background-color: #6d1600; /* Button background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 20px 0 20px;
+  transition: all 0.3s ease;
+}
+
+.hero-image {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.hero-image img {
+  width: 20%; /* Adjust the image size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Container for statistics */
+.statistics {
+  position: relative;
+  display: flex;
+  justify-content: space-around; /* Distribute evenly */
+  align-items: center;
+  padding: 50px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .statistics {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    padding: 50px 0;
+  }
+  .border {
+    display: none;
+  }
+}
+
+.statistics::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #282a3a,
+    transparent
+  ); /* Create the tapered effect */
+}
+
+.statistics .stat-box:nth-child(1),
+.statistics .stat-box:nth-child(3),
+.statistics .stat-box:nth-child(5) {
+  position: relative;
+}
+
+.statistics .stat-box:nth-child(1)::after,
+.statistics .stat-box:nth-child(3)::after,
+.statistics .stat-box:nth-child(5)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: linear-gradient(to top, transparent, #282a3a, transparent);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 20px 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number {
+  font-size: 64px;
+  font-weight: 400;
+  color: #282a3a;
+  margin-bottom: 10px;
+}
+
+/* Styling for the label */
+.stat-label {
+  font-size: 24px;
+  color: #282a3a;
+  font-weight: 400;
+  font-family: 'Playfair', serif;
+}
+
+/* Top Quality Materials */
+.top-quality {
+  position: relative;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.top-quality::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #282a3a,
+    transparent
+  ); /* Create the tapered effect */
+}
+
+.top-quality-text p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #282a3a;
+}
+
+.top-quality-text h2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #282a3a;
+  padding-bottom: 60px;
+  font-family: 'Playfair', serif;
+}
+
+/* Container for the toggle */
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  width: 300px;
+  padding: 5px;
+}
+
+/* Styling for each item */
+.toggle-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for the selected item */
+.toggle-item.selected {
+  background-color: #ffffff;
+}
+
+/* Product Grid Container */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px; /* Space between cards */
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between cards */
+    padding: 20px 0;
+  }
+}
+
+/* General card styling */
+.product-card {
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image styling */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 15px;
+}
+
+/* Title styling */
+.product-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #282a3a;
+  font-family: 'Playfair', serif;
+}
+
+/* Rating styling */
+.product-rating {
+  margin-top: 7px;
+}
+
+.product-rating .price {
+  color: #282828;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-rating .review {
+  color: #282828;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Description styling */
+.product-description {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Footer container (price + button) */
+.product-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Price styling */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #282a3a;
+}
+
+/* Add to Cart Button styling */
+.add-to-cart-btn {
+  background-color: #6d1600;
+  color: #fff;
+  border: none;
+  padding: 4px 30px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.about-us {
+  position: relative;
+}
+
+.about-us::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #282a3a,
+    transparent
+  ); /* Create the tapered effect */
+}
+
+.about-container {
+  padding: 50px 0 30px;
+}
+
+.about-des {
+  text-align: center;
+  font-size: 24px;
+  color: #282a3a;
+  font-weight: 400;
+}
+
+.about-container h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  color: #282a3a;
+  padding-bottom: 40px;
+  font-family: 'Playfair', serif;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    gap: 20px; /* Space between columns */
+    padding: 20px 0;
+  }
+}
+
+.about-text {
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+.about-text p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #282a3a;
+  line-height: 1.6;
+  padding: 15px 0;
+}
+
+.about-text button {
+  display: flex; /* Align child elements horizontally */
+  gap: 10px;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  background-color: #6d1600; /* Button background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 20px 0 20px;
+}
+
+.about-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonials {
+  position: relative;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the container */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Thickness of the border */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #282a3a,
+    transparent
+  ); /* Create the tapered effect */
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột đều nhau */
+  gap: 25px; /* Khoảng cách giữa các card */
+  padding: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột đều nhau */
+    gap: 25px; /* Khoảng cách giữa các card */
+    padding: 15px;
+  }
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.testimonial-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+  margin-right: 10px;
+}
+
+.testimonial-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.testimonial-rating {
+  white-space: nowrap;
+}
+
+.testimonial-comment {
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  color: #282a3a;
+  padding-bottom: 40px;
+  font-family: 'Playfair', serif;
+}
+
+.blog-wrapper {
+  padding-top: 50px;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột đều nhau */
+  gap: 25px; /* Khoảng cách giữa các card */
+  padding: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột đều nhau */
+    gap: 25px; /* Khoảng cách giữa các card */
+    padding: 15px;
+  }
+}
+
+.blog h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  color: #282a3a;
+  padding-bottom: 40px;
+  font-family: 'Playfair', serif;
+}
+
+.blog-card {
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 100px 0 100px;
+  flex-direction: column;
+}
+
+.blog-details {
+  padding: 10px 0;
+}
+
+.blog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blog-description {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  color: #282a3a;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.blog button {
+  display: flex; /* Align child elements horizontally */
+  gap: 10px;
+  margin: 50px auto;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  background-color: #6d1600; /* Button background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 20px 0 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #1a1d29;
+  color: #fff;
+  padding: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.footer-description {
+  line-height: 1.5;
+  word-spacing: 5px;
+}
+
+.footer-section:first-child {
+  flex: 0 0 30%;
+}
+
+.footer-section:not(:first-child) {
+  flex: 0 0 20%;
+  white-space: nowrap;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair', serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #bbb;
+  text-decoration: none;
+  line-height: 1.8;
+}
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons img {
+  margin-right: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.footer-bottom p {
+  flex: 0 0 33%;
+}
+
+.subscribe {
+  flex: 0 0 67%;
+  align-items: center;
+}
+
+.subscribe p {
+  font-weight: 400;
+  font-size: 28px;
+  font-family: 'Playfair', serif;
+  padding-bottom: 20px;
+}
+
+.subscribe-input {
+  position: relative;
+}
+
+.subscribe-input input {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px 20px;
+  border-radius: 12px;
+}
+
+.subscribe-input button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background-color: #6d1600;
+  color: #fff;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 7px;
+  cursor: pointer;
+}

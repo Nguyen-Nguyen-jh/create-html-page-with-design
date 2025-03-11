@@ -1,0 +1,16 @@
+### Basic 
+  * selector: 
+    - Type Selector: Targets elements by their tag name (p, div, ..)
+    - Class Selector: Targets elements with a specific class (.my-class)
+    - ID Selector: Targets an element with a specific ID unique to a page (#my-id).
+  * Combinator: Combinators define the relationship between two or more selectors.
+    - Child Selector (>): Selects direct child elements.
+    - Adjacent Sibling Selector (+): Selects an element that is immediately after a sibling.
+    - General Sibling Selector (~): Selects all sibling elements after a given element.
+  * Psuedo selector: 
+    - :hover: Applies styles when an element is hovered over.
+    - :focus: Applies styles when an element is focused (e.g., input fields).
+    - :nth-child(n): Selects elements based on their position in a parent.
+    - :first-child: Selects the first child element of a parent.
+  * Pseudo-Elements: Style parts of elements (::before, ::after)
+  * CSS Variables: Store reusable values for easier management.

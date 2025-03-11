@@ -1,0 +1,24 @@
+### Learn Basic:
+  * Syntax:
+    - HTML uses elements (tags) enclosed in angle brackets (< >) to define content on a webpage.
+    - HTML Documents have a specific structure, starting with a declaration (<!DOCTYPE html>), 
+      followed by the <html> tag, which contains the rest of the document.
+    - Tags usually come in pairs: an opening tag (<tag>) and a closing tag (</tag>).
+  
+  * Tag: html, head, body, h1...h6, p, a, img, ul, ol 
+  * Sematic tag: header, footer, artical, section, nav, aside, main
+
+### SEO:
+  * Title: The most important SEO element, as it directly impacts search rankings. The <title> tag defines 
+    the page's title, which appears in search results and the browser tab. 
+  * meta tags: A brief description of the page that appears under the title in search results. It helps users 
+    understand the page's content.
+    - <meta name="description" content="A short description of the page">
+    - <meta name="keywords" content="keyword1, keyword2, keyword3">
+  * heading tag: Heading tags structure the content on the page. The <h1> tag represents the main title, 
+    while <h2>, <h3>,... are for subheadings
+  
+### Nested elements:
+  - Nesting elements in HTML can be good practice when it helps create a logical, well-structured layout 
+    and improves accessibility or styling. However, over-nesting or using unnecessary tags can lead to 
+    complex, hard-to-maintain code, making it a bad practice.
