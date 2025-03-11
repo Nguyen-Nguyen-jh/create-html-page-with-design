@@ -9,10 +9,54 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.button-common {
+  display: flex; /* Align child elements horizontally */
+  gap: 10px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: 16px;
+  background-color: #6d1600; /* Button background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 20px 0 20px;
+  transition: transform 0.3s ease; /* Transition for smooth hover effect */
+}
+
+/* Hover effect */
+.button-common:hover {
+  background-color: #a91b00; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-common:active {
+  animation: pulse 0.5s ease-in-out; /* Add pulse animation on click */
+}
+
 /* Header Container */
 header {
   background-color: #fff; /* You can adjust the background color */
   padding: 20px 40px;
+  position: fixed; /* Giữ vị trí cố định khi cuộn */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-container {
@@ -25,6 +69,20 @@ header {
 
 .logo img {
   width: 120px; /* Adjust logo size */
+}
+
+.hamburger-icon {
+  display: none; /* Hide the hamburger icon */
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    display: none; /* Hide the logo */
+  }
+  .hamburger-icon {
+    display: block; /* Display the hamburger icon */
+    cursor: pointer;
+  }
 }
 
 .nav-menu ul {
@@ -96,22 +154,6 @@ header {
   font-weight: 400;
   color: #282a3a;
   margin-bottom: 40px;
-}
-
-.hero-text button {
-  display: flex; /* Align child elements horizontally */
-  gap: 10px;
-  margin: 0 auto;
-  align-items: center;
-  padding: 20px 40px;
-  font-size: 16px;
-  background-color: #6d1600; /* Button background color */
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  border-radius: 0 20px 0 20px;
-  transition: all 0.3s ease;
 }
 
 .hero-image {
@@ -440,22 +482,36 @@ header {
 }
 
 .about-text button {
-  display: flex; /* Align child elements horizontally */
-  gap: 10px;
-  align-items: center;
-  padding: 20px 40px;
-  font-size: 16px;
-  background-color: #6d1600; /* Button background color */
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 0 20px 0 20px;
+  margin: 0;
 }
 
 .about-image {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Hiển thị trên ảnh */
+  left: 50%;
+  margin-left: -75px; /* Căn giữa tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.about-image:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .testimonials {
@@ -612,17 +668,7 @@ header {
 }
 
 .blog button {
-  display: flex; /* Align child elements horizontally */
-  gap: 10px;
   margin: 50px auto;
-  align-items: center;
-  padding: 20px 40px;
-  font-size: 16px;
-  background-color: #6d1600; /* Button background color */
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 0 20px 0 20px;
 }
 
 /* Footer */
@@ -630,7 +676,7 @@ header {
 footer {
   background-color: #1a1d29;
   color: #fff;
-  padding: 40px;
+  padding: 80px;
 }
 
 .footer-container {
