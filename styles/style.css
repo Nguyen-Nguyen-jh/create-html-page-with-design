@@ -75,7 +75,13 @@ header {
   display: none; /* Hide the hamburger icon */
 }
 
-@media (max-width: 768px) {
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Adjust spacing between items */
+}
+
+@media (max-width: 1024px) {
   .logo img {
     display: none; /* Hide the logo */
   }
@@ -83,12 +89,16 @@ header {
     display: block; /* Display the hamburger icon */
     cursor: pointer;
   }
-}
-
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 40px; /* Adjust spacing between items */
+  .header-container {
+    margin: 0;
+    justify-content: start;
+  }
+  .icons {
+    display: none; /* Hide the icons */
+  }
+  .nav-menu {
+    display: none !important; /* Hide the navigation menu */
+  }
 }
 
 .nav-menu li {
@@ -117,7 +127,13 @@ header {
 }
 
 .main-wrapper {
-  padding: 0 90px 50px;
+  padding: 84px 80px 0;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .main-wrapper {
+    padding: 40px 30px 0;
+  }
 }
 
 /* Hero Section */
@@ -154,6 +170,8 @@ header {
   font-weight: 400;
   color: #282a3a;
   margin-bottom: 40px;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
 }
 
 .hero-image {
@@ -168,6 +186,17 @@ header {
   height: auto; /* Maintain aspect ratio */
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .hero-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    gap: 15px; /* Space between images */
+  }
+  .hero-image img {
+    width: 100%;
+  }
+}
+
 /* Container for statistics */
 .statistics {
   position: relative;
@@ -177,12 +206,15 @@ header {
   padding: 50px 0;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 375px) and (max-width: 1024px) {
   .statistics {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 3 columns */
     padding: 50px 0;
+  }
+  .statistics .stat-box:nth-child(3)::after {
+    display: none;
   }
   .border {
     display: none;
@@ -232,6 +264,12 @@ header {
   justify-content: center;
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .stat-box {
+    padding: 20px 25px;
+  }
+}
+
 .stat-number {
   font-size: 64px;
   font-weight: 400;
@@ -251,7 +289,7 @@ header {
 .top-quality {
   position: relative;
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .top-quality::after {
@@ -270,9 +308,12 @@ header {
 }
 
 .top-quality-text p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
   font-size: 24px;
   font-weight: 400;
   color: #282a3a;
+  opacity: 0.7;
 }
 
 .top-quality-text h2 {
@@ -289,7 +330,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: #f6f6f6;
   width: 300px;
   padding: 5px;
@@ -302,8 +343,10 @@ header {
   padding: 10px;
   cursor: pointer;
   background-color: #f6f6f6;
-  border-radius: 15px;
+  border-radius: 30px;
   transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Styling for the selected item */
@@ -328,6 +371,15 @@ header {
   }
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 cards per row */
+    gap: 20px; /* Space between cards */
+    padding: 20px 0;
+  }
+}
+
 /* General card styling */
 .product-card {
   width: 100%;
@@ -339,8 +391,8 @@ header {
 
 /* Image styling */
 .product-image {
-  width: 100%;
-  height: 200px;
+  width: auto;
+  height: 240px;
   object-fit: cover;
 }
 
@@ -356,8 +408,9 @@ header {
   font-size: 24px;
   font-weight: 600;
   margin-top: 10px;
-  color: #282a3a;
-  font-family: 'Playfair', serif;
+  color: #1e2b33;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.4;
 }
 
 /* Rating styling */
@@ -369,12 +422,17 @@ header {
   color: #282828;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
+  opacity: 0.7;
 }
 
 .product-rating .review {
   color: #282828;
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.4;
+  opacity: 0.7;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Description styling */
@@ -382,8 +440,10 @@ header {
   text-align: left;
   font-size: 14px;
   margin-top: 10px;
-  color: #555;
-  line-height: 1.5;
+  color: #282a3a;
+  line-height: 1.4;
+  opacity: 0.7;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Footer container (price + button) */
@@ -400,6 +460,8 @@ header {
   font-size: 18px;
   font-weight: bold;
   color: #282a3a;
+  opacity: 0.7;
+  font-weight: 700;
 }
 
 /* Add to Cart Button styling */
@@ -433,7 +495,7 @@ header {
 }
 
 .about-container {
-  padding: 50px 0 30px;
+  padding: 80px 0 30px;
 }
 
 .about-des {
@@ -441,6 +503,8 @@ header {
   font-size: 24px;
   color: #282a3a;
   font-weight: 400;
+  line-height: 1.2;
+  opacity: 0.56;
 }
 
 .about-container h2 {
@@ -450,6 +514,7 @@ header {
   color: #282a3a;
   padding-bottom: 40px;
   font-family: 'Playfair', serif;
+  line-height: 1.2;
 }
 
 .about-content {
@@ -457,9 +522,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  gap: 80px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 375px) and (max-width: 1024px) {
   .about-content {
     display: grid;
     grid-template-columns: repeat(1, 1fr); /* 2 columns */
@@ -469,7 +535,6 @@ header {
 }
 
 .about-text {
-  padding-right: 30px;
   padding-bottom: 40px;
 }
 
@@ -479,6 +544,7 @@ header {
   color: #282a3a;
   line-height: 1.6;
   padding: 15px 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .about-text button {
@@ -490,6 +556,13 @@ header {
   align-items: center;
   gap: 20px;
   position: relative;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .about-image {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .tooltip {
@@ -517,7 +590,7 @@ header {
 .testimonials {
   position: relative;
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .testimonials::after {
@@ -551,6 +624,15 @@ header {
   }
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Tạo 2 cột đều nhau */
+    gap: 25px; /* Khoảng cách giữa các card */
+    padding: 10px;
+  }
+}
+
 .testimonial-card {
   display: flex;
   flex-direction: column;
@@ -569,18 +651,20 @@ header {
 }
 
 .testimonial-avatar img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .testimonial-name {
   text-align: left;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
   margin: 5px;
   white-space: nowrap;
+  line-height: 1.2;
+  font-family: 'Inter', sans-serif;
 }
 
 .testimonial-rating {
@@ -589,8 +673,10 @@ header {
 
 .testimonial-comment {
   text-align: left;
-  font-size: 14px;
-  color: #555;
+  font-size: 20px;
+  color: #282a3a;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
 }
 
 .testimonials h2 {
@@ -603,7 +689,7 @@ header {
 }
 
 .blog-wrapper {
-  padding-top: 50px;
+  padding: 80px 0;
 }
 
 .blog-container {
@@ -622,6 +708,15 @@ header {
   }
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Tạo 2 cột đều nhau */
+    gap: 25px; /* Khoảng cách giữa các card */
+    padding: 15px;
+  }
+}
+
 .blog h2 {
   text-align: center;
   font-size: 36px;
@@ -629,6 +724,7 @@ header {
   color: #282a3a;
   padding-bottom: 40px;
   font-family: 'Playfair', serif;
+  line-height: 1.2;
 }
 
 .blog-card {
@@ -652,23 +748,57 @@ header {
   margin-bottom: 10px;
 }
 
+.blog-title {
+  gap: 6px;
+}
+
+.blog-title img {
+  width: 13px;
+  height: 13px;
+}
+
+.blog-user-name,
+.blog-date {
+  font-size: 14px;
+  font-weight: 400;
+  color: #282a3a;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+}
+
+.blog-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .blog-description {
   text-align: left;
   font-size: 24px;
   font-weight: 600;
   color: #282a3a;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.4;
 }
 
 .blog-footer {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   margin-top: 20px;
 }
 
+.blog-footer span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #282a3a;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
 .blog button {
-  margin: 50px auto;
+  margin: 50px auto 0;
 }
 
 /* Footer */
@@ -677,6 +807,18 @@ footer {
   background-color: #1a1d29;
   color: #fff;
   padding: 80px;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  footer {
+    padding: 80px 30px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .footer-container {
@@ -692,8 +834,11 @@ footer {
 }
 
 .footer-description {
-  line-height: 1.5;
-  word-spacing: 5px;
+  line-height: 1.6;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-weight: 400;
 }
 
 .footer-section:first-child {
@@ -709,13 +854,15 @@ footer {
   font-family: 'Playfair', serif;
   font-weight: 400;
   font-size: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .footer-section a {
-  color: #bbb;
+  color: #ffffff;
   text-decoration: none;
-  line-height: 1.8;
+  line-height: 2;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
 }
 .footer-section a:hover {
   color: #fff;
@@ -768,7 +915,9 @@ footer {
   background-color: #6d1600;
   color: #fff;
   border: none;
-  padding: 15px 50px;
+  padding: 10px 50px;
   border-radius: 7px;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
 }
